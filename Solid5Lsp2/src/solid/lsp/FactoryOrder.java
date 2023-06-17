@@ -1,10 +1,10 @@
 package solid.lsp;
 
 public class FactoryOrder {
-    public Order create(int qnt, int price, boolean isBonus) {
+    public OrderAbstract create(int price, int qnt, boolean isBonus) {
         if (isBonus) {
-            return new OrderBonus(qnt, price);
+            return new OrderBonus(price, qnt);
         }
-        return new Order(qnt, price);
+        return new Order(price, qnt);
     }
 }

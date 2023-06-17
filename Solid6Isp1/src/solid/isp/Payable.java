@@ -1,7 +1,6 @@
 package solid.isp;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-public interface Payable {
-    void payWebMoney(int amount);
-    void payCreditCard(int amount);
-    void payPhoneNumber(int amount);
+public interface Payable extends PayableCreditCard, PayablePhoneNumber, PayableWebMoney{
+
 }
